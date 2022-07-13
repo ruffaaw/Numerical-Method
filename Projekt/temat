@@ -1,20 +1,22 @@
 Zagadnienie z warunkiem początkowym i brzegowym obejmuje:
 równanie różniczkowe cząstkowe  (∂U(x,t))/∂t=D (∂^2 U(x,t))/(∂x^2 ) , określone dla współrzędnej przestrzennej x∈(-∞;+∞)oraz czasu t∈[0,t_max]
 
-warunek początkowy :
-				U(x, 0) = 1 dla |x| < b ,
-				U(x, 0) = 0 dla |x| > b
-warunki brzegowe :
-			U(-∞,t)=0,
+warunek początkowy :	U(x, 0) = 1 dla |x| < b ,
+			U(x, 0) = 0 dla |x| > b
+			
+warunki brzegowe :	U(-∞,t)=0,
 			U(+∞,t)=0
 
-Zagadnienie to może opisywać transport ciepła, w ośrodku nieskończonym o współczynniku transportu ciepła D, po raptownym zetknięciu trzech części ośrodka o różnej temperaturze(ogrzanej warstwy o grubości 2b, oraz zimnych zewnętrznych pół-nieskończonych obszarów), w chwili t = 0.
+Zagadnienie to może opisywać transport ciepła, w ośrodku nieskończonym o współczynniku transportu ciepła D, 
+po raptownym zetknięciu trzech części ośrodka o różnej temperaturze(ogrzanej warstwy o grubości 2b, oraz zimnych zewnętrznych pół-nieskończonych obszarów), 
+w chwili t = 0.
 
 Rozwiązanie analityczne tego zagadnienia ma postać :
 U(x,t)=1/2 erf((x+b)/(2√Dt))-1/2 erf((x-b)/(2√Dt))
 gdzie  erf(z) jest tzw. funkcją błędu: erf(z)=2/√π ∫_0^z exp(-w^2)dw
 
-Do obliczeń numerycznych przedział nieskończony x należy zastąpić przedziałem skończonym [-a, a], gdzie a⩾b+6√(Dt_max ). Do obliczeń funkcji erf(z) z dokładnością bliską dokładności maszynowej dla zmiennych typu double należy zastosować pakiet CALERF udostępniony przez prowadzącego zajęcia.
+Do obliczeń numerycznych przedział nieskończony x należy zastąpić przedziałem skończonym [-a, a], gdzie a⩾b+6√(Dt_max ). 
+Do obliczeń funkcji erf(z) z dokładnością bliską dokładności maszynowej dla zmiennych typu double należy zastosować pakiet CALERF udostępniony przez prowadzącego zajęcia.
 
 Dyskretyzacja :
 I. Klasyczna metoda bezpośrednia
